@@ -73,7 +73,6 @@
   </insert>
   <select id="findMany" resultType="Reg">
 
-
     select
 
       *
@@ -84,16 +83,21 @@
 
   <where>
 
-    <if test="name !=null">
-      name like'%'||#{name}||'%'
+    <if test="name!=null">
+
+      name like '%${name}%'
+
     </if>
+
     <if test="os!=null">
-      and os like'%'||#{os}||'%'
+
+      and os like '%${os}%'
+
     </if>
 
   </where>
 
-  </select>
+</select>
 
   <select id="findOne" resultMap="reg">
 
@@ -108,6 +112,7 @@
     where
 
       name=#{name}
+
   </select>
 
   <update id="updateOne">

@@ -31,12 +31,15 @@ public class PcListController {
 	public String getPcList(@ModelAttribute PcListForm form, Model model) {
 		log.info(pcService.toString());
 
+
 		Reg reg = modelMapper.map(form,Reg.class);
 
-		List<Reg>pcList = pcService.getPcList(reg);
-
+		List<Reg>pcList = pcService.getPcs(reg);
 
 		model.addAttribute("pcList", pcList);
+
+
+
 
 		return "pc/list";
 	}
@@ -48,9 +51,10 @@ public class PcListController {
 		Reg reg =modelMapper.map(form,Reg.class);
 
 
-		List<Reg>pcList = pcService.getPcList(reg);
+		List<Reg>pcList = pcService.getPcs(reg);
 
 		model.addAttribute("pcList",pcList);
+
 
 		return "pc/list";
 	}

@@ -1,4 +1,4 @@
-INSERT INTO m_pc(
+INSERT INTO m_pc (
 name
 ,os
 ,cpu
@@ -17,7 +17,7 @@ name
 ,release_date
 ,description
 )
-VALUES(
+VALUES (
 'Inspiron 15 7000'
 ,'10-Home'
 ,'i5-7300HQ'

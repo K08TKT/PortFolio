@@ -25,7 +25,7 @@ public class PcServiceImpl implements PcService{
 	}
 
 	@Override
-	public List<Reg> getPcList(Reg reg){
+	public List<Reg> getPcs(Reg reg){
 		return mapper.findMany(reg);
 	}
 

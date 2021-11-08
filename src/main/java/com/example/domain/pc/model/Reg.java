@@ -53,7 +53,7 @@ public class Reg {
 
 
 	//--------------------------
-	private String eth;
+	private String eth;//イーサネット
 	public String getEth() {
 		return eth;
 	}

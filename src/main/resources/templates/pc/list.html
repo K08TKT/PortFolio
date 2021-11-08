@@ -10,8 +10,9 @@
 <body>
   <div layout:fragment="content">
     <div class="header border-bottom">
-      <h1 class="h2">登録PC一覧画面</h1>
+      <h1 class="mysql">登録PC一覧画面</h1>
 </div>
+<!-- 検索 -->
 <div class="mb-4">
   <form id="pc-search-form" method="post" th:action="@{/pc/list}"
     class="form-inline" th:object="${pcListForm}">
